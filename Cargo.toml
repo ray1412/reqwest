@@ -30,12 +30,12 @@ features = [
 default = ["rustls-tls"]
 
 # Removed: default-tls and native-tls specific stuff no longer part of default
-default-tls = ["hyper-tls", "native-tls-crate", "__tls", "tokio-native-tls"]
+# default-tls = ["hyper-tls", "native-tls-crate", "__tls", "tokio-native-tls"]
 
 # Enables native-tls specific functionality not available by default.
-native-tls = ["default-tls"]
-native-tls-alpn = ["native-tls", "native-tls-crate/alpn"]
-native-tls-vendored = ["native-tls", "native-tls-crate/vendored"]
+native-tls = []
+native-tls-alpn = []
+native-tls-vendored = []
 
 rustls-tls = ["rustls-tls-webpki-roots"]
 rustls-tls-manual-roots = ["__rustls"]
@@ -116,9 +116,9 @@ ipnet = "2.3"
 rustls-pemfile = { version = "1.0", optional = true }
 
 ## default-tls
-hyper-tls = { version = "0.5", optional = true }
-native-tls-crate = { version = "0.2.10", optional = true, package = "native-tls" }
-tokio-native-tls = { version = "0.3.0", optional = true }
+# hyper-tls = { version = "0.5", optional = true }
+# native-tls-crate = { version = "0.2.10", optional = true, package = "native-tls" }
+# tokio-native-tls = { version = "0.3.0", optional = true }
 
 # rustls-tls
 hyper-rustls = { version = "0.24.0", default-features = false, optional = true }
