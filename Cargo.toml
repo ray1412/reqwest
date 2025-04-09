@@ -27,10 +27,9 @@ features = [
 ]
 
 [features]
-default = ["default-tls"]
+default = ["rustls-tls"]
 
-# Note: this doesn't enable the 'native-tls' feature, which adds specific
-# functionality for it.
+# Removed: default-tls and native-tls specific stuff no longer part of default
 default-tls = ["hyper-tls", "native-tls-crate", "__tls", "tokio-native-tls"]
 
 # Enables native-tls specific functionality not available by default.
